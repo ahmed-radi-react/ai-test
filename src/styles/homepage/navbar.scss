@@ -1,0 +1,312 @@
+.appbar {
+  position: fixed !important;
+  top: 0 !important;
+  width: 100% !important;
+  z-index: 1010 !important;
+  .MuiContainer-root {
+    padding: 0;
+    max-width: 1512px;
+    width: 100%;
+  }
+  .MuiToolbar-root {
+    display: flex;
+    justify-content: space-between;
+  }
+  background-color: white !important;
+  box-shadow: none !important;
+  .navbar {
+    padding-right: 25px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding-top: 5px;
+    .logodiv {
+      display: flex;
+      gap: 130px;
+      padding-left: 99px;
+      .logo_div {
+        cursor: pointer;
+        z-index: 1;
+        .logo {
+          margin-top: 5px;
+          width: 71px;
+          height: 40px;
+        }
+      }
+      .menubox {
+        svg {
+          path {
+            fill: $yellow-900;
+          }
+        }
+        &.justify {
+          justify-content: center;
+          padding: 0;
+        }
+        cursor: pointer;
+        border: 1px solid $light-grey-100;
+        padding-left: 9px;
+        padding-right: 18px;
+        justify-content: space-between;
+        height: 40px;
+        span {
+          font-weight: 500;
+        }
+      }
+      span {
+        color: $yellow-900;
+      }
+      .nav_text {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        .navigateDiv {
+          display: flex;
+          align-items: center;
+          gap: 14px;
+          .navslastspan {
+            font-family: $font-roboto;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: $grey-1;
+          }
+          .div_breadcrumb {
+            cursor: pointer;
+          }
+          .breadcrumb {
+            font-family: $font-roboto;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 24px;
+            color: $black-200;
+          }
+          .breadcrumbicon {
+            path {
+              fill: $grey-1;
+            }
+          }
+          .breadcrumbicon_active {
+            path {
+              fill: $dark-grey-100;
+            }
+          }
+        }
+      }
+    }
+    .MuiInputBase-root {
+      border-radius: 10px;
+    }
+    .MuiInputBase-root {
+      height: 100%;
+      width: 100%;
+    }
+
+    .searchIcon {
+      position: absolute;
+      right: 8px;
+      top: 10px;
+    }
+    .MuiBox-root {
+      .input {
+        width: 100%;
+        height: 100%;
+        border: none;
+        background: $grey-100;
+        border-radius: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        padding-left: 10px;
+      }
+    }
+    .helpbox {
+      background-color: $grey-100;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: $black-100;
+      }
+    }
+    .userdiv {
+      display: flex;
+      flex-direction: column;
+      .userspan {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: black;
+      }
+      .user {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+        color: black;
+        align-self: flex-end;
+      }
+    }
+  }
+  .userIcon {
+    position: relative;
+    .statusicon {
+      width: 11px;
+      height: 11px;
+      background-color: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 29px;
+      left: 29px;
+      box-shadow: 0px 4px 8px rgba(47, 168, 79, 0.16),
+        0px 2px 4px rgba(47, 168, 79, 0.24);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      div {
+        background-color: $green-10;
+        border-radius: 50%;
+        width: 8.5px;
+        height: 8.5px;
+      }
+    }
+    .notification {
+      position: absolute;
+      width: 26px;
+      height: 20px;
+      background-color: $light-blue;
+      border-radius: 99px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0px;
+      left: 23px;
+
+      .numnotification {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        color: white;
+      }
+    }
+    img {
+      width: 40px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 1px solid $grey-icon;
+    }
+  }
+  .divnavinfo {
+    display: flex;
+    gap: 27px;
+    .infodiv {
+      display: flex;
+      gap: 20px;
+    }
+  }
+}
+.menu_box_chat {
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 40px;
+  .chat_div_ebchat {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    .chat {
+      position: relative;
+      width: 136px;
+      height: 136px;
+      border: 0.8px solid black;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 17px;
+      span {
+        font-weight: 400;
+        font-size: 12.8px;
+        line-height: 19px;
+        &:nth-child(2) {
+          font-weight: 700;
+        }
+      }
+      div {
+        position: absolute;
+        top: 17px;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $light-grey-200;
+        svg {
+          width: 20px !important;
+          height: 20px !important;
+          path {
+            fill: black;
+          }
+        }
+      }
+    }
+  }
+  display: flex;
+  color: black;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.25);
+  .menubox_div {
+    color: black !important;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: 53px;
+    row-gap: 40px;
+    padding: 40px;
+    .menu_title {
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 21px;
+    }
+    .items {
+      &:nth-child(9),
+      &:nth-child(10) {
+        :nth-child(3) {
+          color: $yellow-900;
+        }
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      .menu_item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+        &:nth-child(4) {
+          color: $yellow-900;
+        }
+      }
+    }
+  }
+}
+.MuiContainer-root:has(.menubox_div) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  .MuiToolbar-root {
+    padding-right: 49px;
+  }
+}
+.App:has(.menu_box_chat) {
+  .content {
+    opacity: 0.5 !important;
+  }
+}
+

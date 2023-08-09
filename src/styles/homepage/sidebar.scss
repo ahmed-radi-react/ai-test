@@ -1,0 +1,325 @@
+.sidebar {
+  z-index: 10;
+  position: fixed;
+  width: 280px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .sidebarmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .list_submenu {
+      position: absolute;
+      display: none !important;
+      height: 510px;
+      top: -52px;
+      left: 100%;
+      width: 270px;
+      background-color: white;
+      box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      padding: 25px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      z-index: 21;
+    }
+
+    // .list_submenu {
+    //   position: absolute;
+    //   display: none !important;
+    //   height: 694px;
+    //   top: -82px;
+    //   left: 43px;
+    //   width: 211px;
+    //   background-color: white;
+    //   padding: 1px 10px 25px 0;
+    //   display: flex;
+    //   flex-direction: column;
+    //   z-index: 3;
+    //   border-left: 1px solid #e1e1e1;
+    //   &.show {
+    //     display: block !important;
+    //   }
+    // }
+
+    .add_reqsidebar {
+      height: 40px;
+      text-transform: none;
+      border-radius: 10px;
+      background-color: $green-20-light;
+      position: relative;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      width: 100%;
+      box-shadow: none;
+      font-weight: 500;
+      font-size: 16px;
+      margin-bottom: 30px;
+      line-height: 19px;
+      font-family: $font-roboto;
+
+      div {
+        width: 20px;
+        height: 20px;
+        background: white;
+        opacity: 0.4;
+        border-radius: 4px;
+      }
+
+      svg {
+        position: absolute;
+        left: 44px;
+        width: 10px;
+      }
+    }
+
+    padding-left: 24px;
+    padding-top: 129px;
+    padding-right: 10px;
+
+    .listitem {
+      .arrowiconactive {
+        path {
+          stroke: $yellow-900;
+        }
+      }
+      .arrowdeactive {
+        path {
+          stroke: $grey-800;
+        }
+      }
+      height: 40px;
+      gap: 10px;
+      
+      }
+
+      .menulabel {
+        span {
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: $grey-200;
+        }
+      }
+
+      .activelabel {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: $yellow-900;
+      }
+
+      .linkSubLink {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        width: 100%;
+
+        .activeSubtitle {
+          color: $yellow-900;
+
+          font-style: normal;
+          font-weight: 400;
+
+          line-height: 12px;
+          padding-left: 12px;
+          border-left: 2px solid $yellow-900;
+          height: 21px;
+          display: flex;
+          align-items: center;
+
+          span {
+            font-size: 10px !important;
+          }
+        }
+      }
+    }
+    .sidebarmenu_services {
+      // .line {
+      .activeicon {
+        path {
+          fill: $yellow-900 !important;
+        }
+    }
+    .activelabel{
+      color: $yellow-900;
+    }
+    //   position: absolute;
+    //   left: 0;
+    //   width: 10px;
+    //   height: 100%;
+    //   background-color: red;
+    // }
+    padding-left: 10px;
+    padding-top: 129px;
+    padding-right: 10px;
+    display: flex;
+    // flex-direction: column;
+    // position: relative;
+    gap: 10px;
+    .list_submenu_services {
+      height: 510px;
+      width: 270px;
+      background-color: white;
+      border-radius: 4px;
+      padding: 25px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-left: 1px solid #f2f2f2;
+      padding-top: 0;
+      gap: 15px;
+      &_li {
+        .listitem_servcies {
+          display: flex;
+          gap: 15px;
+          justify-content: space-between;
+          color: #939393;
+          width: max-content;
+          &:hover {
+            background-color: $yellow-100;
+            color: $yellow-900;
+          }
+          .menulabel_servcies {
+            span {
+              font-family: $font-roboto;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 19px;
+              color: inherit; //#939393
+            }
+          }
+        }
+      }
+    }
+    .list_items {
+      width: 50px;
+      height: 50px;
+      padding-right: 0;
+      .listitem_services {
+        height: 50px;
+        gap: 10px;
+        width: 50px;
+        background-color: #f2f2f2;
+        border-radius: 15px;
+      }
+      .active {
+        background-color: #fffbe3;
+      }
+    }
+    .add_reqsidebar_services {
+      width: 50px;
+      height: 40px;
+      background: #80d39b;
+      border-radius: 10px;
+      min-width: 50px !important;
+    }
+  }
+  .log_out_btn {
+    width: 50px;
+    height: 50px;
+    background-color: $logout_btn;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .sidebar_icon_div {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 165px);
+    justify-content: space-between;
+  }
+
+  .sidebarbottom {
+    .list {
+      border-bottom: 1px solid $grey-300;
+
+      .listitem {
+        padding-left: 30px;
+        gap: 10px;
+        .menulabel {
+          span {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: $grey-200;
+          }
+        }
+      }
+    }
+  }
+}
+
+.MuiListItem-root:has(.listitem):hover .list_submenu {
+  display: flex !important;
+}
+
+.list_button_div {
+  width: 100%;
+}
+.dialog_logout {
+  .MuiDialog-container {
+    justify-content: flex-start !important;
+    align-items: end;
+  }
+  .logout_content {
+    padding: 20px;
+    max-width: 284px;
+    display: flex;
+    flex-direction: column;
+    min-height: 242px;
+    height: 100%;
+    .logout_btn {
+      display: flex;
+      gap: 10px;
+      button {
+        max-width: 117px;
+        width: 100%;
+        text-transform: none;
+        box-shadow: none;
+        &.cancel_btn {
+          background-color: $yellow-900;
+        }
+        &.out_btn {
+          background-color: $yellow-100;
+          color: $yellow-900;
+        }
+      }
+    }
+  }
+  .MuiDialogContent-root {
+    border: none !important;
+  }
+  .MuiPaper-root {
+    border-radius: 6px !important;
+  }
+  font-family: $font-inter;
+  .header_log {
+    font-weight: 700;
+    font-size: 18px;
+    color: $yellow-900;
+    padding-top: 8px;
+    padding-bottom: 10px;
+  }
+  .info_log {
+    font-weight: 400;
+    font-size: 12px;
+    padding-bottom: 40px;
+  }
+}
+.listitem{
+  .activeicon{
+    path{
+     fill:$yellow-900 
+    }
+   }
+}

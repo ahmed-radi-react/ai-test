@@ -1,0 +1,366 @@
+.maintenance {
+  min-height: calc(100vh - 64px);
+  max-width: 1232px !important;
+  margin: 0 !important;
+  padding: 40px 50px 53px 50px !important;
+  background-color: $grey-100;
+  .maintenance_header {
+    font-family: $font-roboto;
+    display: flex;
+    justify-content: space-between;
+    .btn {
+      display: flex;
+      gap: 15px;
+      .setting_btn {
+        height: 36px;
+        background-color: $grey-20;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: black;
+        text-transform: capitalize;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+      }
+      .add_btn {
+        background-color: $yellow-100;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: $yellow-900;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+        text-transform: capitalize;
+      }
+      .setting_add_btn {
+        background-color: $green-900;
+        box-shadow: none;
+        color: white;
+        border-radius: 10px;
+        text-transform: none;
+        display: flex;
+        gap: 10px;
+        font-family: $font-roboto;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+
+        svg {
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    .header_span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $header-color;
+    }
+    padding-bottom: 31px;
+  }
+}
+.maitenanceList {
+  padding: 0 !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.edit_icon {
+  width: 19px;
+  height: 19px;
+}
+.other_maintenance {
+  height: 100px;
+  width: 106px;
+  img {
+    max-width: 81px;
+    max-height: 82px;
+    margin-left: 19px;
+  }
+
+  .clickspan {
+    font-size: 9px;
+  }
+  .dropspan {
+    left: 26px;
+    top: 20px;
+  }
+  .edit_icon,
+  .editdiv {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+  }
+}
+.addnewmaintenance {
+  .make_active_div {
+    display: flex;
+  }
+  .subClassactive {
+    border-bottom: 0;
+  }
+  min-height: calc(100vh - 64px);
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 15px 50px 53px 50px !important;
+  .new_service_cont {
+    display: flex;
+    gap: 58px;
+    // gap: 147px;
+    display: flex;
+    padding: 20px;
+    padding-bottom: 34px;
+    border-bottom: 1px solid #cbcbcb;
+
+    .time_cont {
+      display: flex;
+      // gap: 53px;
+      flex-direction: column;
+      max-width: 496px;
+      width: 100%;
+      // justify-content: space-between;
+    }
+    h3 {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 23px;
+      color: #000000;
+      margin-bottom: 20px;
+    }
+    .del_service {
+      font-family: $font-roboto;
+      width: 81px;
+      height: 28px;
+      background-color: #fae1e1;
+      color: #f40000;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: none;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+  }
+
+  .more_service {
+    // height: 305px;
+    background-color: #fbfbfb;
+    .note {
+      margin-left: 19px;
+    }
+    .input_ {
+      input {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: black;
+        &::placeholder {
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: $grey-15;
+          opacity: 1;
+        }
+      }
+      .service_descreption {
+        input {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 130.19%;
+          color: #767676;
+          &::placeholder {
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            color: #bbbbbb;
+          }
+        }
+      }
+    }
+    .sub_categores + .time_cont {
+      margin-top: 37px;
+    }
+  }
+
+  .last_service {
+    border-bottom: none;
+  }
+  .maintainance_cont_scrolled {
+    overflow-y: scroll;
+    max-height: 80vh;
+  }
+  .add_maintenanve_header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+    max-width: 1153px;
+    margin: auto;
+    span {
+      font-family: $font-roboto;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .btn {
+      display: flex;
+      gap: 6px;
+      font-family: $font-roboto;
+      min-width: max-content;
+      font-size: 14px;
+      line-height: 16px;
+      font-family: "Roboto", sans-serif;
+      text-transform: capitalize;
+      font-weight: 600;
+      padding: 6px 20px;
+
+      .add_disabled {
+        background-color: #686868;
+        color: white;
+        pointer-events: none;
+      }
+
+      .save,
+      .add {
+        text-transform: none;
+        border-radius: 10px;
+        background-color: $light-blue-100;
+        box-shadow: none;
+        color: $yellow-900;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+      }
+      .add {
+        background-color: $yellow-100;
+        color: $yellow-900;
+      }
+    }
+  }
+  .img_info_div {
+    display: flex;
+    gap: 20px;
+    .input_ {
+      div {
+        font-weight: 700;
+      }
+      .textfield_name_maintenance {
+        div {
+          font-family: $font-roboto;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 28px;
+          &::placeholder {
+            color: $grey-700 !important;
+            opacity: 1;
+          }
+        }
+        fieldset {
+          border: none;
+        }
+        .MuiInputBase-root {
+          height: 28px;
+          input {
+            padding: 0;
+          }
+        }
+      }
+      display: flex;
+      flex-direction: column;
+
+      .service_descreption {
+        &.textfield {
+          input {
+            font-family: $font-roboto;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #767676;
+          }
+          ::placeholder {
+            color: $grey-700 !important;
+            opacity: 1;
+          }
+          fieldset {
+            border: none;
+          }
+          .MuiInputBase-root {
+            height: 28px;
+            input {
+              padding: 0;
+            }
+          }
+        }
+      }
+      .addSub {
+        text-transform: none;
+        box-shadow: none;
+        background-color: $yellow-100;
+        color: $yellow-900;
+        border-radius: 4px;
+        padding: 5px 10px !important;
+        width: max-content;
+        font-family: $font-roboto;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        margin-top: 41px;
+      }
+    }
+  }
+  .note {
+    font-family: $font-roboto;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 12px;
+    color: $grey-700;
+    padding-top: 13px;
+    display: block;
+    padding-bottom: 15px;
+  }
+  .make_active_amenity {
+    padding-top: 25px;
+  }
+}
+::before,
+::after {
+  display: none;
+}
+.close {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1400;
+  cursor: pointer;
+
+  :last-child {
+    position: absolute;
+    top: 23px;
+    left: 28px;
+  }
+}
+.uploadimage {
+  img {
+    object-fit: cover;
+  }
+}
+.input_with_valid {
+  display: flex;
+  flex-direction: column;
+}

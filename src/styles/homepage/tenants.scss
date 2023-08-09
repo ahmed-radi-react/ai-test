@@ -1,0 +1,1996 @@
+.poperaction {
+  .MuiBox-root {
+    position: absolute !important;
+    right: -10px !important;
+    width: 231px;
+    padding-left: 30px;
+    padding-top: 21px;
+    padding-bottom: 16px;
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    top: 13px;
+    border-radius: 5px;
+
+    li {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      font-family: $font-inter;
+      &:hover {
+        background-color: $yellow-100;
+        color: $yellow-900;
+      }
+
+      &:last-child {
+        color: $red-10;
+      }
+    }
+  }
+
+  .MuiBox-root:has(.arrow-tenant) {
+    li {
+      padding-left: 0 !important;
+    }
+
+    gap: 10px;
+  }
+}
+
+.tenantstable {
+  .buildingData_sort {
+    display: flex;
+    gap: 20px;
+    padding-bottom: 15px;
+
+    div {
+      width: max-content;
+      padding: 5px 10px;
+      border-radius: 4px;
+      background-color: white;
+      display: flex;
+      gap: 10px;
+      cursor: pointer;
+
+      :first-child {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        font-family: $font-roboto;
+        color: $light-grey-800;
+      }
+
+      :nth-child(2) {
+        border-radius: 5px;
+        width: 22px;
+        height: 22px;
+        background-color: $dark-10;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        color: $grey-7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  padding-top: 16px !important;
+
+  .table_action-button {
+    width: 24px;
+    height: 24px;
+    background-color: $yellow-100;
+    min-width: 24px;
+    svg {
+      fill: $yellow-900 !important;
+      path {
+        fill: $yellow-900 !important;
+      }
+    }
+  }
+
+  margin: auto !important;
+  padding-left: 50px !important;
+  padding-right: 29px !important;
+  padding-top: 50px;
+  max-width: 1232px !important;
+  min-height: calc(100vh - 64px);
+  // height: calc(100vh - 254px);
+
+  .tableHeader {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+    padding-top: 7px;
+
+    .headerdiv {
+      display: flex;
+      gap: 20px;
+
+      .tenantspan {
+        cursor: pointer;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        font-family: $font-roboto;
+        color: $grey-70;
+
+        &.active {
+          color: black;
+        }
+      }
+
+      .pendingspan {
+        display: flex;
+        gap: 10px;
+
+        div {
+          width: 22px;
+          height: 22px;
+          border-radius: 4px;
+          font-weight: 600;
+          font-size: 10px;
+          line-height: 12px;
+          color: white;
+          background-color: $red-300;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 5px;
+        }
+
+        &.active {
+          color: black;
+        }
+
+        cursor: pointer;
+        font-family: $font-roboto;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+        color: $grey-70;
+      }
+    }
+
+    .addbtn {
+      background-color: $yellow-100;
+      box-shadow: none;
+      color: $yellow-900;
+      font-family: $font-roboto;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: capitalize;
+      display: flex;
+      gap: 10px;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  .table_tenants {
+    box-shadow: none !important;
+    border-radius: 15px;
+    // height: calc(100vh - 271px);
+    max-height: 100vh;
+
+    .MuiTable-root {
+      margin-top: 11px;
+    }
+
+    .MuiNativeSelect-select {
+      padding-top: 7px;
+    }
+
+    ::before {
+      display: none !important;
+    }
+
+    ::after {
+      display: none !important;
+    }
+
+
+    table {
+      thead {
+        tr {
+          th {
+            font-family: $font-roboto;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 19px;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          td {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 21px;
+            color: $dark-30;
+
+            &:first-child {
+              svg {
+                width: 15px;
+                height: 15px;
+              }
+            }
+          }
+
+          td {
+            &:nth-child(1) {
+              div {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+              }
+
+              .info_tenant {
+                display: flex;
+                flex-direction: column;
+                gap: 0;
+                align-items: flex-start;
+
+                .apartment {
+                  color: $light-grey-900;
+                }
+              }
+
+              gap: 11px;
+              font-family: $font-poppins;
+              font-weight: 600;
+              font-size: 12px;
+              line-height: 18px;
+              color: $light-black;
+
+              img {
+                width: 29px;
+                height: 28px;
+                object-fit: cover;
+                border-radius: 50%;
+              }
+            }
+            .add_car {
+              color: $yellow-900 !important;
+            }
+          }
+        }
+      }
+    }
+
+    .sort {
+      display: flex;
+      gap: 20px;
+      padding-left: 30px;
+      padding-top: 15px;
+
+      .formControl {
+        width: 277px;
+        height: 40px;
+        position: relative;
+        border-radius: 10px;
+        background: #f9f9f9;
+
+        .inputsearch {
+          width: 277px;
+          height: 40px;
+
+          &::before {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+
+          input {
+            padding: 8px 0 8px 11px;
+            font-family: $font-roboto;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: black;
+
+            &::placeholder {
+              color: $black-100;
+              opacity: 1;
+            }
+          }
+        }
+
+        svg {
+          position: absolute;
+          right: 8px;
+          top: 8px;
+        }
+      }
+
+      .sortDiv {
+        .MuiSelect-select {
+          padding: 0 !important;
+          font-weight: 600;
+          font-size: 16px;
+        }
+
+        display: flex;
+        font-family: $font-roboto;
+        align-items: center;
+        gap: 5px;
+
+        .sortspan {
+          color: $dark-grey;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        select {
+          font-weight: 600 !important;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .selecticon {
+          position: absolute;
+          right: -16px;
+          top: 8px;
+        }
+
+        .MuiSvgIcon-root {
+          display: none !important;
+        }
+
+        fieldset {
+          border: none;
+          padding: 0;
+        }
+      }
+    }
+
+    .checked {
+      position: relative;
+
+      .check {
+        position: absolute;
+        left: 2px;
+        width: 11px;
+        height: 16px;
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $light-grey-200;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $scroll-color;
+    width: 6px !important;
+    border-radius: 3px;
+  }
+}
+
+.addtenants {
+  max-width: 1232px !important;
+  margin: 0;
+  padding-left: 50px !important;
+  padding-top: 16px;
+  min-height: calc(100vh - 64px);
+  padding-bottom: 100px;
+
+  .addtenantHeader {
+    display: flex;
+    padding-bottom: 50px;
+    gap: 66px;
+    justify-content: space-between;
+
+    .addtenantspan {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      font-family: $font-roboto;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .btnsaveAdd {
+      display: flex;
+      gap: 10px;
+
+      .savetenantBtn,
+      .addtenantBtn {
+        width: 117px;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: capitalize;
+        padding: 0;
+        box-shadow: none;
+
+        &.deactivate {
+          background-color: $light-grey-20;
+          color: $dark-grey-20;
+        }
+      }
+
+      .savetenantBtn {
+        background-color: $light-blue-100;
+        color: $dark-blue;
+      }
+
+      .addtenantBtn {
+        background-color: $yellow-900;
+      }
+    }
+  }
+
+  .tenantaddbox {
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 31px;
+
+    .addtenantHeader {
+      display: flex;
+      padding-left: 20px;
+      padding-right: 20px;
+
+      .tenantdropinput {
+        display: flex;
+        gap: 20px;
+        max-width: 576px;
+        width: 100%;
+        border-bottom: 1px solid $grey-700;
+        padding-bottom: 25px;
+
+        .addtenantsinputs {
+          width: 399px;
+
+          .tenantinput {
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 28px;
+            font-family: "Roboto", sans-serif;
+            border-bottom: 0.5px solid #eeeeee;
+
+            &::placeholder {
+              color: $black-100;
+            }
+          }
+
+          .inputdiv {
+            display: flex;
+            gap: 11.75px;
+            align-items: center;
+            border-bottom: 0.5px solid #eeeeee;
+            width: 199px;
+
+            .inputaddtenants {
+              font-size: 12px;
+              line-height: 10px;
+              font-weight: 500;
+              color: black;
+
+              ::placeholder {
+                font-weight: 400;
+                color: $black-100;
+              }
+            }
+
+            input {
+              padding: 10px 0px 10px;
+              font-weight: 500;
+              font-size: 12px;
+              line-height: 10px;
+            }
+
+            fieldset {
+              border: none;
+            }
+
+            &.date {
+              position: relative;
+
+              button {
+                position: absolute;
+                left: -25px;
+
+                svg {
+                  display: none;
+                  z-index: 10;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .walletdiv {
+        max-width: 390px;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 39px;
+
+        .dateCvv {
+          display: flex;
+          max-width: 349px;
+          width: 100%;
+          justify-content: space-between;
+        }
+
+        .inputwallet {
+          background-color: $grey-300;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 10px;
+          margin-top: 19px;
+
+          &.card {
+            max-width: 349px;
+            width: 100%;
+            padding-left: 10px;
+            color: black;
+
+            &::placeholder {
+              color: $grey-200;
+            }
+          }
+
+          &.date {
+            width: 170px;
+            color: black;
+            padding-left: 10px;
+
+            &::placeholder {
+              color: $grey-200;
+            }
+          }
+
+          &.cvv {
+            width: 170px;
+            color: black;
+            padding-left: 10px;
+
+            &::placeholder {
+              color: $grey-200;
+            }
+          }
+        }
+
+        .walletspan {
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 10px;
+        }
+
+        .locationdiv {
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .locationspan {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 10px;
+            padding-bottom: 5px;
+          }
+
+          .formcontrol {
+            background-color: $grey-300;
+            border-radius: 4px;
+            position: relative;
+
+            svg {
+              position: absolute;
+              top: 12px;
+              right: 10px;
+            }
+
+            .select {
+              height: 31px !important;
+
+              .MuiSvgIcon-root {
+                display: none;
+              }
+
+              div {
+                display: flex;
+                align-items: center;
+                padding: 10px 0 10px 10px;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 10px;
+                color: black;
+
+                &::placeholder {
+                  color: black;
+                }
+              }
+            }
+
+            fieldset {
+              border: none;
+            }
+
+            .spanbuilding {
+              color: $grey-900;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 10px;
+              position: absolute;
+              top: 10px;
+              left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .documnetdiv {
+    padding: 20px;
+
+    .formcontrol {
+      background-color: $grey-300;
+      border-radius: 4px;
+      position: relative;
+      width: 309px;
+
+      svg {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        z-index: 10;
+      }
+
+      .select {
+        height: 31px !important;
+        background-color: white;
+
+        .MuiSvgIcon-root {
+          display: none;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          padding: 10px 0 10px 10px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 10px;
+          color: black;
+
+          &::placeholder {
+            color: black;
+          }
+
+          padding: 0 0 0 10px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 10px;
+          color: $grey-900;
+        }
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      .spanbuilding {
+        color: $grey-900;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    }
+
+    display: flex;
+    padding-top: 18px;
+    gap: 19px;
+    align-items: end;
+
+    .validdiv {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      width: 100%;
+      max-width: 309px;
+
+      .validspan {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 10px;
+      }
+
+      .textvalid {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: $grey-700;
+      }
+
+      .uploaddoc {
+        display: flex;
+        max-width: 565px;
+        width: 100%;
+        justify-content: space-between;
+
+        .doclink {
+          display: flex;
+          align-items: center;
+          gap: 3px;
+
+          .docId {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            color: $dark-blue;
+            font-family: $font-roboto;
+          }
+
+          .viewDoc {
+            font-weight: 400;
+            font-size: 10px;
+            line-height: 12px;
+            font-family: $font-roboto;
+            color: $grey-60;
+
+            &.remove {
+              padding: 0;
+              text-transform: capitalize;
+              text-decoration: underline;
+              justify-content: start !important;
+              padding-left: 3px !important;
+            }
+          }
+        }
+
+        .docbtn {
+          background-color: $dark-blue;
+          text-transform: capitalize;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          font-family: $font-roboto;
+          width: 103px;
+          height: 35px;
+          padding: 0;
+        }
+      }
+    }
+
+    .uploadbtn {
+      display: flex;
+      height: 35px;
+      gap: 15px;
+      cursor: pointer;
+
+      &.file {
+        position: relative;
+        cursor: pointer;
+
+        .fileupload {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          opacity: 0;
+          cursor: pointer;
+          z-index: 10;
+        }
+      }
+
+      .btn {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: capitalize;
+
+        &.upload {
+          width: 105px;
+          background-color: $yellow-100;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: $yellow-900;
+          box-shadow: none;
+          font-family: $font-roboto !important;
+        }
+
+        &.document {
+          width: 105px;
+          padding: 0;
+          background-color: $yellow-900;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 14px;
+          color: $yellow-100;
+          font-family: $font-roboto !important;
+          box-shadow: none;
+        }
+      }
+    }
+
+    .btn_remove_document {
+      border: 0;
+      background: transparent;
+      color: #ff2d2d;
+      font-weight: 600;
+      font-size: 12px;
+      line-height: 10px;
+      margin-left: 15px;
+    }
+  }
+
+  .MuiInputBase-root {
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
+  }
+
+  .add_panel {
+    .MuiPaper-root {
+      border-radius: 6px 6px 0 0;
+    }
+
+    box-shadow: 0px 0px 40px 2px rgba(0, 0, 0, 0.08);
+
+    .addtenant_panel_summary {
+      svg {
+        fill: $yellow-900;
+        circle {
+          fill: $yellow-100;
+        }
+        path {
+          fill: $yellow-900;
+        }
+      }
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .image-container {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      .accordion_title {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 10px;
+      }
+
+      .accordion_info {
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 10px;
+
+        & > span {
+          margin-right: 5px;
+        }
+
+        &__info {
+          color: $grey-light;
+        }
+
+        .interests_info {
+          color: $light-grey-30;
+          border: 1px solid $light-grey-30;
+          padding: 0.5px 3px;
+          margin-right: 5px;
+          border-radius: 4px;
+        }
+      }
+    }
+  }
+
+  .MuiAccordionSummary-root {
+    padding-left: 20px !important;
+    height: 73px;
+  }
+
+  .MuiPaper-elevation1 {
+    box-shadow: none !important;
+  }
+
+  .MuiAccordion-rounded {
+    border-bottom: 0.5px solid $light-grey-20;
+    margin: 0 !important;
+  }
+
+  .general_info_tenants {
+    display: flex;
+    padding: 20px;
+    border-top: 0.5px solid $light-grey-20;
+
+    .droptenant {
+      width: 135px;
+
+      .notediv {
+        padding-top: 13px;
+
+        .notespan {
+          display: block;
+          width: 147px;
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 12px;
+          color: $grey-500;
+        }
+      }
+    }
+
+    .input_tenant {
+      padding-left: 15px;
+
+      .input_div {
+        padding-bottom: 15px;
+        display: flex;
+        gap: 15px;
+
+        .input_info {
+          background-color: white;
+          width: 300px;
+          border-radius: 4px;
+
+          input {
+            padding: 10px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 10px;
+            color: $dark-grey-200;
+          }
+        }
+
+        .phone_div {
+          margin-top: -26px;
+
+          span {
+            font-weight: 400;
+            font-size: 8px;
+            line-height: 10px;
+            color: $light-grey-40;
+          }
+
+          .PhoneInput {
+            width: 300px;
+            height: 37px;
+            background-color: white;
+
+            .PhoneInputCountry {
+              padding-left: 11px;
+            }
+
+            input {
+              border: none;
+            }
+
+            :focus {
+              outline: none;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .location_tenant {
+    display: flex;
+    flex-direction: column;
+    padding: 25px 20px;
+    gap: 15px;
+    border-top: 0.5px solid $light-grey-20;
+
+    .formcontrol {
+      background-color: $grey-300;
+      border-radius: 4px;
+      position: relative;
+
+      svg {
+        position: absolute;
+        top: 12px;
+        right: 10px;
+        z-index: 10;
+      }
+
+      .select {
+        height: 31px !important;
+        background-color: white;
+
+        .MuiSvgIcon-root {
+          display: none;
+        }
+
+        div {
+          display: flex;
+          align-items: center;
+          padding: 10px 0 10px 10px;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 10px;
+          color: black;
+
+          &::placeholder {
+            color: black;
+          }
+
+          padding: 0 0 0 10px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 10px;
+          color: $grey-900;
+        }
+      }
+
+      fieldset {
+        border: none;
+      }
+
+      .spanbuilding {
+        color: $grey-900;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 10px;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+      }
+    }
+  }
+
+  .interest_tenant {
+    padding: 20px;
+    border-top: 0.5px solid $light-grey-20;
+
+    .interest_divs {
+      display: flex;
+      gap: 10px;
+      padding-top: 15px;
+
+      div {
+        border: 1px solid $light-grey-30;
+        border-radius: 4px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 10px;
+        color: $grey-900;
+        padding: 10px 7px;
+      }
+    }
+
+    .search_interest {
+      // max-width: 576px;
+      // width: 100%;
+      // background-color: white;
+      // border-radius: 4px;
+      // padding-left: 10px;
+      // font-weight: 400;
+      // font-size: 12px;
+      // line-height: 10px;
+      // height: 31px;
+      &::placeholder {
+        color: $grey-900;
+      }
+    }
+  }
+
+  .family_guest_pets_divs {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 15px;
+
+    div {
+      width: 184px;
+      height: 62px;
+      border-radius: 6px;
+      background-color: white;
+      padding: 0 10px;
+      display: flex;
+      justify-content: space-between;
+
+      span {
+        font-weight: 400;
+        font-size: 10px;
+        color: $yellow-900 !important;
+        width: 100px;
+        padding-top: 10px;
+      }
+
+      .btn_edit {
+        box-shadow: none;
+        text-transform: none;
+        background-color: $yellow-100;
+        color: $yellow-900 !important;
+        height: 24px;
+        width: 31px;
+        min-width: max-content !important;
+        padding: 5px;
+        align-self: center;
+      }
+    }
+  }
+
+  .family_guest_pets_tenant {
+    .family_guest_pets_divs {
+      padding-left: 20px;
+      padding-bottom: 20px;
+      display: flex;
+      gap: 15px;
+
+      div {
+        width: 184px;
+        height: 62px;
+        border-radius: 6px;
+        background-color: white;
+        padding: 0 10px;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          font-weight: 400;
+          font-size: 10px;
+          color: $dark-blue;
+          width: 100px;
+          padding-top: 10px;
+        }
+
+        .btn_edit {
+          box-shadow: none;
+          text-transform: none;
+          background-color: $yellow-100;
+          color: $dark-blue;
+          height: 24px;
+          width: 31px;
+          min-width: max-content !important;
+          padding: 5px;
+          align-self: center;
+        }
+      }
+    }
+
+    padding: 21px 0 0px 0;
+    border-top: 0.5px solid $light-grey-20;
+
+    .btnguestfamily {
+      display: flex;
+      gap: 17px;
+      padding-left: 20px;
+      padding-bottom: 27px;
+
+      .btnaddtenant {
+        background-color: $yellow-100;
+        color: $yellow-900;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        text-transform: none;
+        box-shadow: none;
+        width: 152px;
+        height: 25px;
+      }
+    }
+  }
+
+  .acount_add_tenant {
+    max-width: 576px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+
+    .divs {
+      &.second {
+        flex-direction: row !important;
+      }
+
+      justify-content: space-between;
+      background-color: white;
+      border-radius: 6px;
+      padding: 10px;
+      align-items: center;
+
+      .btn {
+        background-color: $yellow-100;
+        color: $yellow-900;
+        text-transform: none;
+        box-shadow: none;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+
+        &.date {
+          width: 83px;
+          height: 24px;
+          padding: 0;
+        }
+
+        &.change {
+          height: 24px;
+          padding: 0;
+        }
+      }
+
+      .first_span,
+      .second_span {
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 141.69%;
+        display: flex;
+      }
+
+      .second_span {
+        color: $yellow-900 !important;
+      }
+    }
+
+    div {
+      display: flex;
+
+      .language {
+        color: $dark-blue !important;
+        font-weight: 700 !important;
+      }
+
+      :first-child {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+.tenant_dialog_add_new {
+  .MuiDialogContent-root {
+    border: none !important;
+    padding: 0 !important;
+  }
+
+  .addfamilymember {
+    border-top: 1px solid $grey-700;
+    background-color: #fff;
+    padding-left: 20px;
+    padding-right: 23px;
+    width: 400px;
+
+    .familyspan {
+      text-align: center;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 23px;
+      font-family: $font-inter;
+      padding-top: 50px;
+      display: block;
+      color: $yellow-900;
+      padding-bottom: 40px;
+    }
+
+    .familydiv {
+      padding-bottom: 50px;
+      display: flex;
+      justify-content: center;
+
+      .familymamber {
+        // display: flex;
+        gap: 15px;
+
+        .PhoneInput {
+          background-color: $grey-19;
+          height: 35px;
+          padding-left: 10px;
+        }
+
+        .familyinput {
+          .input {
+            .PhoneInputInput {
+              background-color: $grey-19;
+              border: none;
+
+              &:focus {
+                outline: none !important;
+              }
+            }
+          }
+
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 15px;
+
+          .familydate {
+            width: 300px;
+            height: 35px;
+
+            input {
+              height: 100% !important;
+            }
+
+            input {
+              background-color: $grey-19;
+              color: black;
+              height: 22px;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 10px;
+              height: 22px;
+              border-radius: 4px;
+
+              &::placeholder {
+                color: $grey-10;
+                opacity: 1;
+              }
+
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+
+      .btn {
+        margin-top: 40px;
+
+        .deletebtn {
+          height: 37px;
+          width: 100%;
+          text-transform: capitalize;
+          opacity: 1;
+          background-color: $red-100;
+          box-shadow: none;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 16px;
+          color: $red-200;
+          border-radius: 4px;
+        }
+
+        .savebtn {
+          color: #fff;
+          background-color: $dark-grey-10;
+          margin-right: 15px;
+          pointer-events: none;
+        }
+
+        .activeAdd {
+          background-color: $yellow-900;
+          color: $yellow-100;
+          pointer-events: visible;
+        }
+      }
+    }
+  }
+
+  .addguest_tenant {
+    width: 400px;
+    border-top: 0.5px solid $light-grey-20;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .guestspan {
+      display: block;
+      text-align: center;
+      font-family: $font-inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 16px;
+      color: $yellow-900;
+    }
+
+    .guestdiv {
+      display: flex;
+      justify-content: center;
+
+      .guestmamber {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding-top: 40px;
+
+        .guestinput {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          gap: 15px;
+
+          .PhoneInput {
+            width: 300px;
+            height: 31px;
+            background-color: $grey-19;
+
+            .PhoneInputInput {
+              background-color: $grey-19 !important;
+            }
+
+            .PhoneInputCountry {
+              padding-left: 11px;
+            }
+
+            input {
+              border: none;
+            }
+
+            :focus {
+              outline: none;
+            }
+          }
+
+          .guestdate {
+            width: 300px;
+
+            input {
+              background-color: $grey-19;
+              color: black;
+              height: 22px;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 10px;
+              height: 22px;
+              border-radius: 4px;
+
+              &::placeholder {
+                color: $grey-10;
+                opacity: 1;
+              }
+
+              padding-left: 10px;
+            }
+          }
+
+          .formcontrol {
+            width: 212px;
+            max-height: 31px;
+            height: 100%;
+
+            .select {
+              height: 100%;
+              width: 300px;
+
+              .MuiSelect-select {
+                padding: 0;
+                opacity: 1;
+                background-color: $grey-19;
+                height: 31px;
+
+                .MuiSelect-nativeInput {
+                  height: 100%;
+                }
+
+                font-weight: 400;
+                font-size: 12px;
+                line-height: 10px;
+                color: $grey-40;
+                display: flex;
+                align-items: center;
+                padding-left: 10px;
+                border-radius: 4px;
+              }
+
+              .MuiSvgIcon-root {
+                display: none;
+              }
+
+              fieldset {
+                border: none;
+              }
+            }
+
+            svg {
+              position: absolute;
+              right: -88px;
+              top: 12px;
+              z-index: 10;
+            }
+
+            &.guest {
+              width: 200px !important;
+            }
+          }
+        }
+
+        .btn {
+          margin-top: 40px;
+
+          .deletebtn {
+            height: 37px;
+            width: 100%;
+            text-transform: capitalize;
+            opacity: 1;
+            background-color: $red-100;
+            box-shadow: none;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 16px;
+            color: $red-200;
+            border-radius: 4px;
+          }
+
+          .savebtn {
+            color: #fff;
+            background-color: $dark-grey-10;
+            margin-right: 15px;
+            pointer-events: none;
+          }
+
+          .activeAdd {
+            background-color: $yellow-900 !important;
+            pointer-events: visible;
+            color: $yellow-100;
+          }
+        }
+      }
+
+      .activeAddPets {
+        background-color: $dark-blue;
+      }
+    }
+  }
+}
+
+.MuiDataGrid-columnSeparator--sideRight {
+  display: none !important;
+}
+
+.MuiDataGrid-columnHeader--alignCenter .MuiDataGrid-columnHeaderTitleContainer {
+  display: none !important;
+}
+
+.arrow-tenant {
+  left: 209px !important;
+}
+
+.MuiAccordionDetails-root {
+  padding: 0 !important;
+  background-color: $grey-100;
+}
+
+.Mui-selected {
+  background-color: $dark-blue !important;
+}
+
+.MuiPickersCalendarHeader-label {
+  font-weight: 700;
+  font-size: 19px;
+  line-height: 23px;
+  color: $dark-20;
+}
+
+.MuiPickersCalendarHeader-labelContainer {
+  pointer-events: none;
+
+  svg {
+    display: none !important;
+  }
+}
+
+.MuiDayPicker-header {
+  span {
+    font-size: 19px;
+    line-height: 22px;
+    color: $dark-20;
+    font-weight: 500;
+  }
+}
+
+.MuiDayPicker-weekContainer {
+  button {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 23px;
+    color: black;
+  }
+}
+
+.tenant_dialog {
+  .MuiDialogContent-root {
+    padding: 0 !important;
+    border: none !important;
+  }
+
+  .MuiPickersArrowSwitcher-root {
+    button {
+      svg {
+        color: transparent;
+      }
+    }
+  }
+
+  .icon_right {
+    position: absolute;
+    right: 74px;
+    top: 20px;
+  }
+
+  .icon_left {
+    position: absolute;
+    right: 24px;
+    top: 20px;
+  }
+}
+
+.MuiAccordionSummary-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.charge_wallet {
+  width: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px 35px 20px 35px;
+
+  &__header {
+    font-weight: 700 !important;
+    padding-bottom: 19px !important;
+  }
+
+  &__image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    // background-color: $light-blue-100;
+    margin: 0 auto;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__client_name {
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 21px !important;
+    margin-top: 10px !important;
+  }
+
+  &__balance_container {
+    margin-bottom: 20px;
+    margin-top: 25px;
+    display: flex;
+    background: $grey-300;
+    align-items: center;
+
+    .charge_wallet__balance {
+      &-input {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        height: 36px;
+        color: $black-200;
+
+        &::placeholder,
+        &::-webkit-input-placeholder,
+        &::-ms-input-placeholder {
+          color: $grey-6;
+          /* not work yet*/
+        }
+      }
+
+      &-icon {
+        padding: 9px 10px;
+        line-height: 18px;
+        font-size: 10px;
+        color: $grey-6;
+      }
+    }
+  }
+
+  &__confirm {
+    background: $grey-300;
+    height: 36px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-input {
+      color: $black-200;
+      width: 100% !important;
+
+      input {
+        font-size: 12px !important;
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: space-between;
+
+      &-confirm,
+      &-cancel {
+        padding: 10px;
+        border: 0;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      &-confirm {
+        color: $dark-blue;
+      }
+
+      &-cancel {
+        color: $grey-6;
+        background-color: none;
+      }
+    }
+  }
+
+  &__charge_button {
+    width: 100%;
+    @include blueButton();
+  }
+}
+
+.charge_wallet_success {
+  padding: 20px 35px;
+  width: 400px;
+  height: 277px;
+
+  &__image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__header {
+    font-weight: 700 !important;
+    padding-top: 19px !important;
+    padding-bottom: 19px !important;
+    line-height: 21px !important;
+  }
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+
+    &-personal {
+      width: 70%;
+      display: flex;
+      align-items: flex-start;
+
+      .image-container {
+        display: flex;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+
+      .content-container {
+        margin-left: 10px;
+
+        .charge_wallet_success__client {
+          &-name {
+            font-weight: 500;
+            font-size: 14px !important;
+            line-height: 21px !important;
+          }
+
+          &-notify {
+            border: 0;
+            background: none;
+            font-size: 10px !important;
+            font-weight: 700;
+            // line-height: 10px!important;
+            color: $dark-blue;
+
+            span {
+              margin-left: 5px;
+            }
+
+            svg {
+              height: 10px;
+            }
+          }
+        }
+      }
+    }
+
+    &-balance {
+      width: 30%;
+      height: 50px;
+      background-color: $grey-300;
+      border-radius: 5px;
+      padding: 5px 10px;
+
+      .balance-header {
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 15px;
+        color: $balance-grey;
+      }
+
+      .balance-info {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 5px;
+
+        &__mount {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 21px !important;
+        }
+
+        &__currency {
+          color: $grey-6;
+        }
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    @include blueButton();
+  }
+}
+
+.MuiDialogContent-root:has(.charge_wallet) {
+  padding: 0 !important;
+
+  p {
+    width: max-content;
+  }
+}
+
+.charge_wallet__balance_container {
+  width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.charge_wallet__balance-input {
+  input {
+    font-size: 12px;
+  }
+}
+
+.charge_wallet__confirm {
+  width: 100% !important;
+}
+
+.charge_wallet_body__current_balance_content {
+  font-weight: 700;
+  font-size: 48px;
+  opacity: 0.74;
+  padding-bottom: 32px;
+}
+
+.charge_wallet_body__button {
+  button {
+    width: 130px;
+    height: 45px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 21px;
+    cursor: pointer;
+  }
+}
+
+.charge_wallet_body__activity {
+  p {
+    opacity: 0.7;
+  }
+}
+
+.activity-time_line-right-button {
+  font-weight: 500 !important;
+}
+
+.MuiPaper-root:has(.addguest_tenant) {
+  border-radius: 6px !important;
+}
+
+.MuiPaper-root:has(.addfamilymember) {
+  border-radius: 6px !important;
+}
+
+.activebuildingdata {
+  background-color: red;
+}
+
+.charge_wallet__charge_button {
+  pointer-events: none;
+  background-color: $dark-grey-10;
+  color: white;
+
+  &.charge {
+    background-color: $yellow-100;
+    color: $dark-blue;
+    pointer-events: visible;
+  }
+}
+
+.charge_wallet__confirm-button-confirm {
+  color: $grey-6;
+  pointer-events: none;
+
+  &.confirm {
+    color: $dark-blue;
+    pointer-events: visible;
+  }
+}
+.date_birth_field {
+  height: 37px;
+  background-color: white;
+  width: 300px;
+
+  input {
+    font-size: 13px;
+  }
+
+  div {
+    height: 37px;
+  }
+
+  fieldset {
+    border: none;
+    width: 300px;
+  }
+  &.add_user {
+    width: 315px !important;
+    height: 26px;
+    fieldset {
+      height: 26px;
+    }
+    input {
+      height: 26px;
+      padding: 0 10px 0 10px;
+    }
+  }
+}
+

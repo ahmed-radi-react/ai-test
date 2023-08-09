@@ -1,0 +1,568 @@
+.charge_wallet_container {
+  min-height: calc(100vh - 64px);
+}
+
+.charge_wallet_header {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+
+  &__head {
+    margin-left: 10px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.charge_wallet_body {
+  background-color: rgb(255, 255, 255);
+  width: 600px;
+  border-radius: 15px;
+  min-height: 72vh;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  padding-top: 30px;
+
+  &__image_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 77px;
+    width: 77px;
+    border-radius: 50%;
+    margin: 0 auto;
+
+    img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  &__client_name {
+    @include header($mTop: 10px)
+  }
+
+  &__current_balance_content {
+    margin-top: 50px;
+    text-align: center;
+
+    .current_balance_content-header {
+      color: #00000087;
+      font-size: 14px;
+    }
+
+    .current_balance_content-amount,
+    .current_balance_content-currency {
+      font-size: 48px;
+    }
+
+    .current_balance_content-currency {
+      margin-left: 5px;
+    }
+  }
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 27px;
+    border-bottom: 1px solid $light-grey-border;
+    padding-bottom: 30px;
+
+    button {
+      padding: 10px;
+      border: 0;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: 600;
+      color: $dark-blue;
+      background-color: $light-blue-100;
+    }
+  }
+
+  &__activity {
+    padding: 20px 30px;
+
+    .activity-header {
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0;
+      padding-bottom: 10px;
+    }
+
+    .activity-time_line-container {
+      height: 300px;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 10px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background: #F1F1F1;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: #BFBFBF;
+        border-radius: 10px;
+      }
+
+      .activity-time_line {
+        display: flex;
+        justify-content: space-between;
+        padding: 15px 0;
+        border-bottom: 1px solid $light-grey-border;
+
+        .activity-time_line-left {
+          &-date {
+            @include header($mTop: 0);
+            margin-bottom: 8px;
+          }
+        }
+
+        .activity-time_line-right {
+          padding-right: 5px;
+
+          &-amount {
+            @include header($mTop: 0);
+            margin-bottom: 8px;
+          }
+
+          &-button {
+            @include blueButton($padding: 0, $bgColor: transparent);
+          }
+        }
+      }
+    }
+  }
+
+  &__charge_wallet {
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: $grey-100;
+    margin-top: 35px;
+    padding: 36px;
+
+    .charge_wallet-header {
+      margin-bottom: 13px;
+    }
+
+    .charge_wallet-subheader {
+      color: #727272;
+      margin-top: 13px;
+    }
+
+    .charge_wallet-input-container {
+      span {
+        margin-left: 10px;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        color: #B5B5B5;
+      }
+
+      .charge_wallet-confirm_input {
+        width: 50%;
+        font-size: 48px;
+        line-height: 72px;
+
+        input {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  &__confirm {
+    background: #fff;
+    height: 36px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &-input {
+      color: $black-200;
+      width: 70%;
+    }
+
+    &-button {
+      width: 25%;
+      display: flex;
+      justify-content: space-between;
+
+      &-confirm,
+      &-cancel {
+        padding: 10px;
+        border: 0;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: 600;
+        background: transparent !important;
+      }
+
+      &-confirm {
+        pointer-events: none;
+        color: $grey-6;
+
+        &.charge {
+          color: $dark-blue;
+
+          pointer-events: visible;
+        }
+      }
+
+      &-cancel {
+        color: $grey-6;
+      }
+    }
+  }
+
+  &__charge_button {
+    @include blueButton();
+    width: 100%;
+  }
+}
+
+.charge_wallet_body__charge_button {
+  pointer-events: none;
+  background-color: $grey-10;
+  color: white;
+
+  &.charge {
+    pointer-events: visible;
+    color: $dark-blue;
+    background-color: $light-blue-100;
+
+  }
+}
+
+.MuiPaper-root:has(.invoice_charge_wallet) {
+  border-radius: 0 !important;
+}
+
+.MuiDialogContent-root:has(.invoice_charge_wallet) {
+  width: 595px !important;
+  border-radius: 0 !important;
+  overflow-x: hidden;
+}
+
+.invoice_charge_wallet {
+  .payment_details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 100px;
+
+    div:has(.text) {
+      span {
+        font-weight: 700;
+        font-size: 14px;
+      }
+    }
+
+    .first {
+      .text {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-black-1;
+      }
+
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 20px;
+      border-bottom: 1px solid $red-pink;
+
+      :first-child {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 15px;
+        color: $red-pink;
+      }
+    }
+
+    .last {
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 17px;
+      color: $grey-8-light;
+
+      :first-child {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-blue
+      }
+    }
+  }
+
+  .tabe {
+    .sub {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $grey-8-light;
+    }
+
+    .resp {
+      padding-top: 5px;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+      color: $dark-black-1;
+      padding-bottom: 20px;
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    .table_with_numbers {
+      display: flex;
+
+      .invoice_num {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+
+        .item {
+          :first-child {
+            font-weight: 400;
+            font-size: 14px;
+            color: $grey-8-light;
+          }
+
+          :last-child {
+            font-weight: 600;
+            font-size: 14px;
+            color: $dark-black-1;
+            padding-top: 5px;
+          }
+        }
+      }
+    }
+  }
+
+  .invoice_table {
+    div:has(.terms) {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding-top: 20px;
+    }
+
+    .terms {
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 15px;
+      color: $grey-8-light;
+    }
+
+    .desc {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      color: $dark-black-1;
+    }
+
+    .sub_total_invoice {
+      justify-content: space-between;
+      display: flex;
+      padding: 10px;
+      border-top: 2px solid $red-pink;
+      border-bottom: 2px solid $red-pink;
+      height: 60px;
+
+      .first,
+      .amount {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .first {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: $grey-8-light;
+        gap: 10px;
+      }
+
+      .amount {
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 15px;
+        color: $dark-black-1;
+        gap: 10px;
+      }
+    }
+
+    .total {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      height: 44px;
+      align-items: center;
+
+      .usd {
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: $dark-black-1;
+
+        :last-child {
+          color: $grey-8-light;
+        }
+      }
+
+      &:last-child {
+        color: $dark-blue;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 24px;
+      }
+    }
+
+    thead {
+      th {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        height: 35px;
+        color: $grey-8-light;
+        padding: 0;
+
+        &:first-child {
+          padding-left: 10px;
+        }
+
+        &:last-child {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    th,
+    td {
+      border-top: 1px solid $red-pink;
+      border-bottom: 2px solid $red-pink;
+    }
+
+    width: 396px;
+
+    .MuiPaper-root {
+      border: 1px solid $red-pink;
+      border-radius: 8px;
+      height: 195px;
+    }
+
+    tbody {
+      tr {
+        height: 24px;
+
+        td,
+        th {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 15px;
+          color: $dark-black-1;
+          padding: 0;
+        }
+
+        th {
+          padding-left: 10px;
+        }
+
+        td {
+          &:last-child {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  width: 595px !important;
+
+  .header {
+    display: flex;
+
+    .left,
+    .right {
+      font-family: $font-inter;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    .left {
+      align-items: flex-start;
+
+
+      .location {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $grey-8-light;
+        padding-top: 18px;
+      }
+
+      .day {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-black-1;
+        padding-top: 10px;
+      }
+    }
+
+    .right {
+      gap: 5px;
+
+      :first-child {
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 44px;
+        color: $grey-8-light;
+        padding-bottom: 10px;
+      }
+
+      :nth-child(2) {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        color: $grey-8-light;
+      }
+
+      :nth-child(3) {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: $dark-black-1
+      }
+
+      :last-child {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: end;
+        display: block;
+        max-width: 147px;
+        color: $dark-black-1;
+      }
+    }
+  }
+}

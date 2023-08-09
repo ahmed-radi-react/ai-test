@@ -1,0 +1,543 @@
+.usermanagement_conatiner {
+  max-width: 1152px !important;
+  height: calc(100vh - 64px);
+  margin: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 15px;
+
+  .request_header {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-roboto;
+
+    span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .btn {
+      background-color: $yellow-100;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: none;
+      color: $yellow-900;
+      display: flex;
+      gap: 10px;
+      height: 36px;
+      padding-top: 0;
+      padding-bottom: 0;
+      border-radius: 10px;
+      box-shadow: none;
+      width: 175px;
+      height: 36px;
+    }
+  }
+
+  .sortUserTable {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px;
+
+    div {
+      cursor: pointer;
+      width: 100px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background-color: white;
+      font-family: $font-roboto;
+      color: $light-grey-800;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+
+      &.activeserv {
+        background-color: $yellow-100;
+        color: $yellow-900;
+      }
+    }
+  }
+}
+
+.addnew-user-dialog:has(.upload_doc_user_multiple) {
+  .continue {
+    max-width: 371px;
+    width: 100%;
+    margin-bottom: 41px;
+  }
+}
+
+.upload_doc_user_multiple {
+  padding-top: 31px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .file_upload_csv {
+    position: relative;
+    padding-top: 26px;
+    padding-bottom: 15px;
+
+    label {
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+    }
+  }
+
+  .add_text {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    text-align: center;
+    max-width: 325px;
+    padding: 10px 0;
+  }
+
+  .multi_div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+
+    .down {
+      font-weight: 500;
+      font-size: 12px;
+      color: $dark-blue;
+    }
+  }
+}
+
+.addnew-user-dialog {
+  display: flex;
+  flex-direction: column;
+  height: 322px;
+  align-items: center;
+  padding: 30px;
+  width: max-content;
+  padding-left: 70px;
+  padding-right: 70px;
+
+  .added {
+    .info {
+      font-family: $font-inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 12px;
+      text-align: center;
+      max-width: 331px;
+      display: block;
+    }
+
+    .span_upload {
+      font-family: $font-inter;
+      text-align: center;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 14px;
+      padding-top: 29px;
+      display: block;
+      padding-bottom: 10px;
+    }
+
+    .uploaded {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 17px 24px 17px 18px;
+      background: $grey-100;
+      border-radius: 10px;
+      height: 53px;
+      margin-bottom: 30px;
+
+      .div_uploaded {
+        display: flex;
+        gap: 12px;
+
+        svg {
+          path {
+            fill: $green-800;
+          }
+        }
+
+        span {
+          font-family: $font-inter;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          color: $dark-blue;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          width: 125px;
+          height: 1.2em;
+          white-space: nowrap;
+        }
+      }
+
+      .remove {
+        text-transform: capitalize;
+        font-family: $font-inter;
+        font-style: normal;
+        font-weight: 400;
+        color: $red-900;
+      }
+    }
+  }
+
+  .addspan {
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $yellow-900;
+  }
+
+  .single_multi_user {
+    display: flex;
+    gap: 15px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    .user_div {
+      position: relative;
+
+      .checkbox {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 15px;
+        height: 15px;
+        padding: 0 !important;
+        align-self: flex-start;
+      }
+    }
+
+    .checkincon {
+      width: 15px;
+      height: 15px;
+      border: 1px solid #cccccc;
+      background-color: white;
+      border-radius: 50%;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      width: 121px;
+      height: 121px;
+      border-radius: 10px;
+      background-color: $grey-100;
+      align-items: center;
+      justify-content: center;
+      gap: 17px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 18px;
+      color: $dark-30;
+      cursor: pointer;
+    }
+
+    .single_user,
+    .multi_user {
+      width: 50px;
+      height: 50px;
+      background-color: $light-blue-100;
+      border-radius: 50%;
+
+      svg {
+        width: 30px;
+        height: 30px;
+
+        path {
+          fill: $dark-blue;
+        }
+      }
+    }
+
+    .multi_user {
+      width: 62px;
+
+      svg {
+        path {
+          fill: $dark-blue;
+          stroke: $dark-blue;
+        }
+      }
+    }
+  }
+
+  .continue {
+    max-width: 257px;
+    width: 100%;
+    text-transform: none;
+    font-family: $font-roboto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    color: $yellow-900;
+    background-color: $yellow-100;
+    border-radius: 5px;
+    box-shadow: none;
+
+    &:hover {
+      background-color: $yellow-100;
+    }
+
+    &.file {
+      max-width: 340px;
+      margin-top: 14px;
+    }
+  }
+}
+
+.addnew_user_home {
+  max-width: 1152px !important;
+  height: calc(100vh - 64px);
+  margin: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 15px;
+
+  .header_adduser {
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-roboto;
+    padding-bottom: 42px;
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .add_userbtn {
+      min-width: max-content;
+      width: max-content;
+      text-transform: none;
+      box-shadow: none;
+      background-color: $yellow-900;
+      border-radius: 5px;
+      width: 116px;
+      height: 28px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      color: white;
+      &.Mui-disabled {
+        background-color: $dark-30;
+      }
+    }
+  }
+
+  .adduser_panel_summary {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    span {
+      font-weight: 600;
+      font-size: 14px;
+    }
+  }
+
+  .add_panel {
+    .MuiPaper-root {
+      margin: 0;
+    }
+  }
+
+  .upload_image {
+    width: 125px;
+    height: 125px;
+
+    .dropspan {
+      justify-content: flex-end;
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .select_info_withupload {
+    display: flex;
+    gap: 14px;
+    padding: 20px;
+
+    .info_add_user_info {
+      // display: grid;
+      // grid-template-columns: repeat(2, minmax(0, 1fr));
+      // width: max-content;
+      // height: max-content;
+      // row-gap: 10px;
+      // column-gap: 33px;
+      .error_container {
+        display: flex;
+        justify-content: space-between;
+        p {
+          width: 315px;
+        }
+      }
+      .input__container {
+        .PhoneInput{
+          input{
+            border: none;
+            height: 100%;
+          }
+        }
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: max-content;
+        height: max-content;
+        // row-gap: 10px;
+        column-gap: 33px;
+        margin-bottom: 10px;
+
+        .input {
+          width: 315px;
+          height: 31px;
+          border-radius: 4px;
+          background-color: white;
+
+          .PhoneInputInput {
+            border: none;
+
+            &:focus {
+              border: none !important;
+            }
+          }
+
+          input {
+            padding-left: 10px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 10px;
+
+            &::placeholder {
+              color: $dark-grey-200;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .addRole_user {
+    padding: 20px;
+    display: flex;
+    gap: 30px;
+    .checkincon,
+    .checked {
+      width: 20px;
+      height: 20px;
+      border: 1px solid $yellow-900;
+      border-radius: 5px;
+      background-color: $yellow-100;
+    }
+    .checked {
+      background-color: $yellow-900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .MuiSelect-select {
+      background-color: white;
+    }
+    .select_service {
+      &.service_fisrt{
+        max-width: 300px;
+        width: 100%;
+      }
+      &.specific {
+        max-width: 500px;
+        width: 100%;
+      }
+      border-radius: 4px;
+      background-color: white !important;
+      align-items: center;
+      .building_assigned {
+        &.service{
+          display: flex;
+          flex-direction: column;
+        }
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        position: relative;
+        border-top: 1px solid $grey-500;
+        padding-top: 20px;
+        padding-left: 20px;
+        max-width: 500px;
+        & > label,.role_span {
+          position: absolute;
+          top: -38px;
+          left: 19px;
+        }
+        .role_span {
+          top: -22px;
+          left: 0;
+        }
+      }
+      span {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 10px;
+        color: $dark-grey-200;
+        padding-left: 10px;
+      }
+    }
+    .select {
+      width: 100%;
+      background-color: $grey-19;
+      border-radius: 6px;
+      fieldset {
+        border: none;
+      }
+
+      div {
+        padding: 0;
+        font-family: $font-inter;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 15px;
+        color: black;
+
+        .selesct_span_d {
+          color: $grey-light;
+        }
+      }
+
+      .MuiSvgIcon-root {
+        display: none !important;
+      }
+    }
+    .search_building {
+      .result_building {
+        max-height: 150px;
+        overflow-y: scroll;
+      }
+    }
+  }
+}
+
+.MuiPaper-root:has(.upload_doc_user_multiple) {
+  height: 478px;
+}
+
+.addnew-user-dialog:has(.uploaded) {
+  height: 300px;
+}

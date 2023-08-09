@@ -1,0 +1,247 @@
+.gourmet {
+  padding: 40px 50px 53px 50px !important;
+  margin-left: 0 !important;
+  min-height: calc(100vh - 64px);
+  .gourmet_header {
+    font-family: $font-roboto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .btn {
+      display: flex;
+      gap: 15px;
+      .setting_btn {
+        height: 36px;
+        background-color: $grey-20;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: black;
+        text-transform: capitalize;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+      }
+      .add_btn {
+        background-color: $light-blue-100;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: $dark-blue;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+        text-transform: none;
+      }
+      ._add_amenity {
+        text-transform: none;
+        box-shadow: none;
+        min-width: max-content;
+        background-color: $yellow-900;
+        color: $yellow-100;
+        border-radius: 10px;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        display: flex;
+        gap: 10px;
+        svg {
+          fill: white;
+          path {
+            fill: white;
+          }
+        }
+      }
+    }
+    .header_span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $header-color;
+    }
+    padding-bottom: 31px;
+  }
+  .overviewDiv {
+    padding-top: 5px;
+  }
+  .gourmet_header {
+    display: flex;
+    padding-bottom: 22px;
+    justify-content: space-between;
+    max-width: 1024px;
+    width: 100%;
+    align-items: center;
+    .span_gourmet {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      padding-top: 48px;
+      color: $subheader-color;
+    }
+    .pagination {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+      .btn {
+        min-width: max-content !important;
+        padding: 0 !important;
+      }
+      span {
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+      }
+    }
+  }
+  .gourmet_divs {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 30px;
+    max-width: 1024px;
+    width: 100%;
+    .notice_item {
+      .image_div {
+        .opacity_div {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          z-index: 1;
+          background-color: gray;
+          opacity: 0.2;
+        }
+        border-radius: 6px 6px 0px 0px;
+        position: relative;
+        height: 147px;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 6px 6px 0px 0px;
+        }
+        svg {
+          width: 15px;
+          position: absolute;
+          z-index: 10;
+          right: 15px;
+          rotate: 90deg;
+          top: 25px;
+        }
+        span {
+          position: absolute;
+          font-weight: 700;
+          font-size: 10px;
+          line-height: 22px;
+          top: 15px;
+          left: 15px;
+          color: white;
+          z-index: 1;
+        }
+      }
+      .info_div {
+        background: white;
+        border-radius: 0 0 6px 6px;
+        padding: 15px 15px 17px 15px;
+        .description_div {
+          justify-content: space-between;
+          display: flex;
+          padding-bottom: 5px;
+          .span_desc {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 20px;
+          }
+          div {
+            display: flex;
+            flex-direction: column;
+            width: max-content;
+            background: $light-grey-50;
+            border-radius: 6px;
+            padding: 4px;
+            align-items: center;
+            justify-content: center;
+            span {
+              font-weight: 400;
+              font-size: 10px;
+              line-height: 22px;
+              width: max-content;
+            }
+          }
+        }
+        .detail {
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 20px;
+          color: $light-grey-500;
+        }
+      }
+    }
+  }
+}
+/* Add website */
+.gourmet_Add_website {
+  padding: 40px 50px 53px 50px;
+  min-height: calc(100vh - 64px);
+  width: 547px !important;
+  .gourmet_header {
+    font-family: $font-roboto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 45px;
+    .header_span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $header-color;
+    }
+  }
+  .content_container {
+    background: #fff;
+    padding: 66px 30px;
+    &__user {
+      text-align: center;
+      margin-bottom: 65px;
+      &-image {
+        display: flex;
+        justify-content: center;
+      }
+      &-header {
+        margin-top: 40px;
+      }
+    }
+    &__form {
+      &-url {
+        width: 100%;
+        border-radius: 10px;
+      }
+      &-submit {
+        width: 100%;
+        margin-top: 15px;
+        text-transform: capitalize;
+        @include blueButton(
+          $padding: 10px,
+          $borderRadius: 10px,
+          $border: 0,
+          $fSize: 16px,
+          $fWeight: 600,
+          $color: $yellow-100,
+          $bgColor: $yellow-900
+        );
+        &:hover {
+          background-color: $yellow-900;
+        }
+      }
+    }
+  }
+}

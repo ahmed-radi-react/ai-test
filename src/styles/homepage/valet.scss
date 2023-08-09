@@ -1,0 +1,796 @@
+.valet_dashboard {
+  padding: 40px 50px 53px 50px !important;
+  min-height: calc(100vh - 64px);
+  margin-left: 0 !important;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    .valet_header {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $header-color;
+    }
+
+    .btn {
+      display: flex;
+      gap: 15px;
+
+      .button_valet {
+        display: flex;
+        gap: 11px;
+        text-transform: none;
+        box-shadow: none;
+        min-width: none !important;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        border-radius: 10px;
+        height: 36px;
+        padding: 0 10px !important;
+
+        &.setting {
+          background-color: $grey-20;
+          color: black;
+        }
+
+        &.add {
+          background-color: $yellow-100;
+          color: $yellow-900;
+        }
+
+        &.valet {
+          background-color: $yellow-900;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .pending_latest_valet {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 39px;
+    padding-bottom: 19px;
+
+    .latest_span_div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      span {
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        color: $subheader-color;
+      }
+
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $red-300;
+        border-radius: 5px;
+        width: 27px;
+        height: 26px;
+        color: white;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    .see_all_btn {
+      text-decoration: none;
+      text-transform: none;
+      box-shadow: none;
+      background-color: $yellow-100;
+      color: $yellow-900;
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 21px;
+      min-width: none !important;
+      padding: 10px 20px !important;
+      border-radius: 10px;
+    }
+  }
+}
+
+._table {
+  .sortdiv {
+    display: flex;
+    gap: 16px;
+    padding-bottom: 15px;
+
+    .sort {
+      box-shadow: none;
+      display: flex;
+      width: max-content;
+      padding: 5px 10px;
+      background-color: white;
+      border-radius: 4px;
+      gap: 10px;
+      text-transform: none;
+
+      span {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 19px;
+        color: #888888;
+      }
+
+      div {
+        width: max-content;
+        padding: 5px;
+        background-color: $dark-10;
+        color: #787878;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+      }
+    }
+
+    .activesort {
+      background-color: $light-blue-100;
+
+      span {
+        color: black;
+      }
+
+      div {
+        background-color: white;
+        color: $dark-blue;
+      }
+    }
+  }
+
+  .sort {
+    .btn_calendar {
+      padding: 10px;
+      min-width: max-content !important;
+      gap: 5px;
+      background-color: white;
+      border: 1px solid #e3e5e5;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      color: #757575;
+      box-shadow: none;
+      text-transform: none;
+      height: 39px;
+      border-radius: 10px;
+      margin-right: 10px;
+    }
+    background-color: white;
+    border-bottom: 1px solid #dcdcdc;
+    padding-bottom: 20px;
+    display: flex;
+    gap: 20px;
+    padding-top: 15px;
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+
+    .formControl {
+      width: 277px;
+      height: 40px;
+      position: relative;
+      border-radius: 10px;
+      background-color: $grey-400;
+
+      .inputsearch {
+        width: 277px;
+        height: 40px;
+        background-color: $grey-400;
+        border-radius: 10px;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+
+        input {
+          padding: 8px 0 8px 11px;
+          font-family: $font-roboto;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: black;
+
+          &::placeholder {
+            color: $black-100;
+            opacity: 1;
+          }
+        }
+      }
+
+      svg {
+        position: absolute;
+        right: 8px;
+        top: 8px;
+      }
+    }
+
+    .sortDiv {
+      display: flex;
+      font-family: $font-roboto;
+      align-items: center;
+      gap: 5px;
+
+      .sortspan {
+        color: $dark-grey;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      select {
+        font-weight: 600 !important;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .selecticon {
+        position: absolute;
+        right: 14px;
+        top: 14px;
+      }
+
+      .MuiSvgIcon-root {
+        display: none !important;
+      }
+    }
+  }
+
+  .tables {
+    border-radius: 15px;
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+  }
+
+  table {
+    background-color: white;
+
+    thead {
+      tr {
+        th {
+          font-family: $font-roboto;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 19px;
+          color: $table-header-color;
+
+          &:nth-child(3) {
+            padding-left: 40px;
+          }
+        }
+      }
+
+      .MuiTableCell-paddingCheckbox {
+        display: none !important;
+      }
+    }
+
+    tbody {
+      .arrow {
+        position: absolute;
+        z-index: 10;
+        right: 53px;
+        top: 30px;
+      }
+
+      tr {
+        .imageDiv {
+          color: $light-black;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 18px;
+          display: flex;
+          align-items: center;
+          gap: 12px;
+
+          img {
+            width: 28px;
+            height: 28px;
+            object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+
+        :nth-child(1) {
+          &.MuiTableCell-sizeMedium {
+            // padding-left: 31px;
+          }
+        }
+
+        :nth-child(2) {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          color: $dark-30;
+        }
+
+        :nth-child(3) {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 21px;
+          color: $dark-30;
+        }
+
+        :nth-child(4) {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: $grey-80;
+        }
+
+        :nth-child(5) {
+          font-family: $font-roboto;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 16px;
+          color: $grey-80;
+        }
+
+        :nth-child(6) {
+          display: flex;
+          justify-content: center;
+          // .status_parcel {
+          //   width: max-content;
+          //   margin: auto;
+          //   padding: 2px 5px;
+          //   border-radius: 4px;
+          //   text-align: center;
+          //   &.pending,
+          //   &.waitingApproval,
+          //   &.inProgress,
+          //   &.waitingActorAssignment {
+          //     background-color: $light-yellow-10;
+          //   }
+          //   &.approved,
+          //   &.completed {
+          //     background-color: $light-green-100;
+          //   }
+          //   &.requested,
+          //   &.cancelled,
+          //   &.scheduled {
+          //     background-color: #e1f4ff;
+          //   }
+          //   &.rejected {
+          //     background-color: #c2161617;
+          //   }
+          //   .status {
+          //     font-weight: 400;
+          //     font-size: 14px;
+          //     line-height: 21px;
+          //     text-transform: capitalize;
+          //     &.pending,
+          //     &.waitingApproval,
+          //     &.inProgress,
+          //     &.waitingActorAssignment {
+          //       color: $light-yellow-green;
+          //     }
+          //     &.approved,
+          //     &.completed {
+          //       color: $green-light;
+          //     }
+          //     &.requested,
+          //     &.cancelled,
+          //     &.scheduled {
+          //       color: #0489d4;
+          //     }
+          //     &.rejected {
+          //       color: #c21616;
+          //     }
+          //   }
+          // }
+        }
+      }
+
+      .action {
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+
+        div {
+          width: 24px;
+          height: 42px;
+          background-color: $yellow-100;
+          border-radius: 4px;
+          justify-content: center;
+          svg {
+            fill: $yellow-900;
+            path {
+              fill: $yellow-900;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background-color: #f1f1f1;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #bfbfbf;
+    border-radius: 3px;
+  }
+}
+
+.valet_requests {
+  padding: 0px 50px 53px 50px;
+  height: calc(100vh - 64px);
+
+  .header {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 34px;
+    position: relative;
+    background-color: $grey-400;
+    margin-bottom: 0 !important;
+    .btn {
+      text-transform: none;
+      box-shadow: none;
+      min-width: none !important;
+      padding: 0 10px;
+      background-color: $light-blue-100;
+      color: $dark-blue;
+      border-radius: 10px;
+      height: 36px;
+      display: flex;
+      gap: 10px;
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    .span_div {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      span {
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 28px;
+      }
+
+      div {
+        width: max-content;
+        font-family: $font-roboto;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        color: $grey-100-dark;
+        background: $dark-10;
+        border-radius: 5px;
+        padding: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 26px;
+      }
+    }
+  }
+}
+
+.valet_dialog_select {
+  .btn_assign {
+    box-shadow: none;
+    text-transform: none;
+    min-width: max-content !important;
+    width: 245px;
+    height: 36px;
+    background-color: $yellow-900;
+    color: $yellow-100;
+    border-radius: 4px;
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
+    margin-top: 23px;
+    margin-left: 30px;
+    margin-bottom: 33px;
+    &:hover {
+      background-color: $yellow-900;
+    }
+  }
+
+  .select_span {
+    display: block;
+    padding-left: 30px;
+    padding-top: 33px;
+    font-family: $font-inter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: $yellow-900;
+  }
+
+  .sort {
+    padding-left: 30px;
+    padding-top: 18px;
+    padding-bottom: 20px;
+    background-color: white;
+    border-bottom: 1px solid #dcdcdc;
+    display: flex;
+    gap: 20px;
+
+    .formControl {
+      .MuiInputBase-input {
+        font-weight: 400;
+        font-size: 10px !important;
+        line-height: 10px;
+      }
+
+      width: 245px;
+      height: 40px;
+      position: relative;
+      border-radius: 10px;
+      background-color: $grey-400;
+
+      .inputsearch {
+        width: 245px;
+        height: 40px;
+        background-color: $grey-400;
+        border-radius: 10px;
+
+        &::before {
+          display: none;
+        }
+
+        &::after {
+          display: none;
+        }
+
+        input {
+          padding: 8px 0 8px 11px;
+          font-family: $font-roboto;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: black;
+
+          &::placeholder {
+            color: $black-100;
+            opacity: 1;
+          }
+        }
+      }
+
+      svg {
+        width: 10px !important;
+        height: 9px !important;
+        position: absolute;
+        right: 20px;
+        top: 13px;
+      }
+    }
+
+    .sortDiv {
+      display: flex;
+      font-family: $font-roboto;
+      align-items: center;
+      gap: 5px;
+
+      .sortspan {
+        color: $dark-grey;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      select {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 16px;
+      }
+
+      .selecticon {
+        position: absolute;
+        right: 18px;
+        top: 10px;
+      }
+
+      .MuiSvgIcon-root {
+        display: none !important;
+      }
+    }
+  }
+
+  .list {
+    .list_item {
+      height: 57px;
+      .left_item_div {
+        display: flex;
+        span {
+          svg {
+            color: initial;
+            fill: $yellow-100;
+            rect {
+              color: initial;
+
+              stroke: $yellow-900;
+            }
+            path {
+              color: initial;
+
+              fill: $yellow-900;
+            }
+          }
+        }
+      }
+
+      padding: 15px 30px;
+      justify-content: space-between;
+
+      .MuiCheckbox-root {
+        padding: 0 !important;
+      }
+
+      display: flex;
+      border-bottom: 0.5px solid $light-grey-90;
+      align-items: center;
+
+      .img_div {
+        margin-left: 20px;
+        margin-right: 12px;
+        position: relative;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .active {
+          border-radius: 50%;
+          position: absolute;
+          bottom: 1px;
+          right: 1px;
+          width: 10px;
+          height: 10px;
+          background-color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          div {
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: $red-400;
+          }
+        }
+      }
+
+      .tenanat_info {
+        display: flex;
+        flex-direction: column;
+
+        :first-child {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 18px;
+          color: $light-black;
+        }
+
+        :nth-child(2) {
+          font-weight: 400;
+          font-size: 10px;
+          line-height: 15px;
+          color: $yellow-900;
+        }
+      }
+
+      .btn_div {
+        display: flex;
+        gap: 7px;
+
+        svg {
+          padding: 0;
+          width: 9px;
+          height: 9px;
+        }
+
+        .btn {
+          font-weight: 400;
+          font-size: 7.31111px;
+          line-height: 9px;
+          text-transform: none;
+          gap: 8px;
+          height: 18px;
+          width: 54px;
+          min-width: max-content !important;
+          background-color: $yellow-100;
+          color: $yellow-900;
+          box-shadow: none;
+          padding: 0 !important;
+        }
+      }
+    }
+  }
+}
+
+.MuiPaper-root:has(.valet_dialog_select) {
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: $light-grey-200;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: $scroll-color;
+    width: 6px !important;
+    border-radius: 3px !important;
+  }
+}
+
+.MuiDialogContent-root:has(.valet_dialog_select) {
+  width: 432px;
+  padding: 0 !important;
+
+  .btn_div {
+    padding-top: 0 !important;
+    button {
+      border: none !important;
+      border-radius: 3px;
+    }
+
+    svg {
+      border: none;
+    }
+
+    span {
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,538 @@
+.service_dashboard {
+  min-height: calc(100vh - 64px);
+  margin-left: 0 !important;
+  padding-left: 50px !important;
+
+  .service_dashboard_header {
+    .header_service {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      color: $header-color;
+    }
+
+    font-family: $font-roboto;
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      display: flex;
+      gap: 15px;
+
+      .setting_btn {
+        height: 36px;
+        background-color: $grey-20;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: black;
+        text-transform: capitalize;
+        padding: 10px;
+        display: flex;
+        gap: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+      }
+
+      .add_btn {
+        background-color: $yellow-100;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        color: $yellow-900;
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        box-shadow: none;
+        border-radius: 10px;
+        text-transform: none;
+      }
+    }
+
+    padding-bottom: 31px;
+  }
+
+  padding-top: 45px;
+}
+
+.service_management {
+  max-width: 1152px !important;
+  height: calc(100vh - 64px);
+  margin: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 15px;
+
+  .request_header {
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-roboto;
+
+    .service_management_div_btn {
+      display: flex;
+      gap: 10px;
+
+      .btn {
+        background-color: $yellow-100;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: none;
+        color: $yellow-900;
+        display: flex;
+        gap: 10px;
+        height: 36px;
+        padding-top: 0;
+        padding-bottom: 0;
+        border-radius: 10px;
+        box-shadow: none;
+        width: 175px;
+        height: 36px;
+
+        &.cards {
+          background-color: white;
+          width: 113px;
+          padding: 0;
+          gap: 5px;
+          border: 1px solid $light-grey-100;
+          padding: 0 3px;
+          color: $dark-grey;
+        }
+      }
+    }
+
+    span {
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+  }
+
+  .sortServiceTable {
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px;
+
+    div {
+      width: 100px;
+      height: 29px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 4px;
+      background-color: white;
+      font-family: $font-roboto;
+      color: $light-grey-800;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 16px;
+      line-height: 19px;
+
+      &.activeserv {
+        background-color: $yellow-100;
+        color: $yellow-900;
+      }
+    }
+  }
+}
+
+.add_service_container {
+  max-width: 1153px !important;
+  height: calc(100vh - 64px);
+  margin: auto !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-top: 15px;
+
+  .header_addservice {
+    .action_addservice {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    display: flex;
+    justify-content: space-between;
+    font-family: $font-roboto;
+
+    span {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .add_servicebtn {
+      min-width: max-content;
+      width: max-content;
+      text-transform: none;
+      box-shadow: none;
+      background-color: $disable_btn;
+      border-radius: 5px;
+      width: 116px;
+      height: 28px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 16px;
+      pointer-events: none;
+
+      &.active_addservice {
+        pointer-events: visible;
+        background-color: $yellow-900;
+        color: $yellow-100;
+      }
+    }
+  }
+
+  .add_services {
+    padding-top: 42px;
+
+    .MuiPaper-root {
+      margin-bottom: 0 !important;
+      margin-top: 0 !important;
+    }
+
+    .addservice_panel_summary {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-weight: 600;
+      font-size: 14px;
+      line-height: 10px;
+
+      .icon_detail {
+        width: 33px;
+        height: 33px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: $yellow-100;
+      }
+    }
+  }
+
+  .add-service-actrors {
+    padding-top: 60px;
+
+    .span {
+      font-family: $font-roboto;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 28px;
+      display: block;
+      padding-bottom: 42px;
+    }
+
+    .addservice_panel_summary {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 10px;
+      }
+    }
+  }
+}
+
+.dropimageservice {
+  width: 215px;
+  height: 96px;
+
+  .dropspan {
+    bottom: 21px;
+    left: 49px;
+  }
+}
+
+.service-add_info {
+  .addServiceimage {
+    width: 215.29px;
+    height: 96px;
+    border-radius: 6px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 6px;
+      object-fit: cover;
+    }
+  }
+
+  .text_area {
+    height: 142px;
+    span {
+      color: red;
+      font-size: 12px;
+      font-weight: 400;
+    }
+
+    .css-44gyu3-JoyTextarea-root {
+      --Textarea-focusedHighlight: white;
+    }
+
+    .JoyTextarea-root {
+      height: 100%;
+      border: none;
+      border-radius: 4px;
+      background-color: white;
+      padding: 10px !important;
+
+      textarea {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 10px;
+
+        &::placeholder {
+          color: $dark-grey-200;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  padding: 13px 26px 22px 26px;
+  display: flex;
+  justify-content: space-between;
+
+  .image_div {
+    width: 46%;
+
+    .info_service_add {
+      margin-top: 13px;
+      background: white;
+      border-radius: 4px;
+      width: 100%;
+      height: 31px;
+
+      input {
+        padding-left: 10px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 10px;
+        color: black;
+
+        &::placeholder {
+          color: $dark-grey-200;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .text_area {
+    width: 46%;
+  }
+}
+
+.select-avail {
+  padding: 15px 20px;
+  height: max-content;
+
+  .select_available {
+    position: relative;
+    width: 390px;
+    height: 31px;
+    background-color: white;
+
+    fieldset {
+      border: none;
+      border-radius: 4px;
+    }
+
+    svg {
+      opacity: 0;
+    }
+
+    span {
+      position: absolute;
+      left: 10px;
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 10px;
+      color: $grey-900;
+      top: 10px;
+    }
+
+    .down_svg {
+      position: absolute;
+      opacity: 1 !important;
+      right: 10px;
+      top: 10px;
+    }
+
+    .add-service-select-avail {
+      width: 390px;
+      height: 31px !important;
+      position: relative;
+    }
+  }
+}
+
+#demo-simple-select-autowidth {
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  padding-left: 10px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 10px;
+  color: $grey-900;
+}
+
+.MuiPaper-root:has(.available) {
+  width: 390px;
+  padding-left: 10px;
+  font-weight: 400;
+  font-size: 12px !important;
+  line-height: 10px;
+  color: $grey-900;
+}
+
+.MuiPopover-root:has(.available) {
+  .MuiBackdrop-root {
+    background: none !important;
+  }
+}
+
+.MuiCollapse-root {
+  //overflow: auto !important;
+}
+
+.detail_proport_services {
+  padding: 20px;
+
+  .span {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 10px;
+  }
+
+  .select_div {
+    width: 390px;
+    height: 31px;
+    background-color: white;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+
+    span,
+    svg {
+      position: absolute;
+      top: 10px;
+
+      path {
+        fill: $grey-200;
+      }
+    }
+
+    span {
+      left: 10px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 10px;
+      color: $grey-200;
+
+      &.selected {
+        color: black;
+      }
+    }
+
+    svg {
+      right: 10px;
+    }
+  }
+
+  .options {
+    display: flex;
+    flex-direction: column;
+    width: 390px;
+    border-radius: 4px;
+    background-color: white;
+    margin-top: 11px;
+
+    div {
+      padding: 10px;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 10px;
+      color: $black-100;
+      cursor: pointer;
+    }
+  }
+}
+
+.add_service_admin {
+  display: flex;
+
+  .addactor {
+    color: $yellow-900;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 14px;
+    background: none;
+    cursor: pointer;
+    padding-top: 26px;
+  }
+
+  .input_add_actor {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 390px;
+    padding-top: 16px;
+    padding-bottom: 20px;
+
+    .inputs_actor {
+      background-color: white;
+      border-radius: 4px;
+      height: 31px;
+
+      input {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 10px;
+        padding-left: 10px;
+
+        &::placeholder {
+          color: $dark-30;
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .addcancel_actor {
+    height: 31px;
+    border-radius: 4px;
+    text-transform: none;
+    box-shadow: none;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 10px;
+
+    &.add {
+      background-color: $yellow-900;
+      color: $yellow-100;
+    }
+
+    &.cancel {
+      background-color: white;
+      color: $dark-30;
+      border: 1px solid $dark-30;
+    }
+  }
+}
+
+.arrow_up {
+  rotate: 180deg;
+}

@@ -1,0 +1,110 @@
+@import "./styles/variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import "./styles/homepage/resusable.scss";
+@import "./styles/homepage/signin.scss";
+@import "./styles/homepage/navbar.scss";
+@import "./styles/homepage/sidebar.scss";
+@import "./styles/homepage/tenants.scss";
+@import "./styles/homepage/amenities.scss";
+@import "./styles/homepage/maintenance.scss";
+@import "./styles/homepage/parcels.scss";
+@import "./styles/homepage/bellboy.scss";
+@import "./styles/homepage/visitors.scss";
+@import "./styles/homepage/valet.scss";
+@import "./styles/homepage/notices.scss";
+
+@import "./styles/homepage/chargewallet.scss";
+
+@import "./styles/land-screen.scss";
+@import "./styles/homepage/services.scss";
+@import "./styles/homepage/organizationmember.scss";
+@import "./styles/homepage/usefulinformation.scss";
+@import "./styles/homepage/building.scss";
+
+@import "./styles/homepage/otherproperties.scss";
+@import "./styles/homepage/usefulInformationPage.scss";
+
+@import "./styles/homepage/gourmetmanagement.scss";
+@import "./styles/homepage/home.scss";
+@import "./styles/homepage/addfeatures.scss";
+
+@import "./styles/userpage/user.scss";
+@import "./styles/homepage/onlymobileaccess.scss";
+@import "./styles/homepage/notfount.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: $font-poppins;
+}
+.content_alert {
+  position: fixed;
+  height: 100vh;
+  z-index: 11;
+}
+.content {
+  max-height: calc(100vh - 64px);
+  opacity: 1;
+  display: flex;
+  max-width: 1512px;
+  width: 100%;
+  margin: auto;
+  .outlet {
+    height: max-content;
+    background-color: $grey-400;
+    padding-top: 64px;
+    margin-left: 295px;
+    width: calc(100% - 280px);
+    .MuiCircularProgress-root {
+      width: 120px !important;
+      height: 120px !important;
+      color: $yellow-900 !important;
+      align-self: center;
+      margin: auto;
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+    &.editOutlet {
+      width: 100% !important;
+      margin: 0;
+    }
+    &.editOutlet:has(.message_alert) {
+      position: relative;
+    }
+  }
+
+  .outlet:has(.MuiCircularProgress-root) {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &.editOutlet {
+      width: 100% !important;
+      margin: 0;
+    }
+  }
+}
+.outlet:has(.maintenance):has(.MuiCircularProgress-root) {
+  justify-content: start !important;
+}
+.content_services {
+  margin-left: 0 !important;
+  max-width: 1675px !important;
+}
+.content:has(.setting_header) {
+  .sidebar {
+    display: none;
+  }
+  .outlet {
+    width: 100% !important;
+    margin: 0;
+  }
+}
+.content.content_services{
+  max-width: unset !important;
+}

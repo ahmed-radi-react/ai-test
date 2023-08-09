@@ -1,0 +1,11 @@
+.not_found_page {
+  height: calc(100vh - 71px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .image_not {
+    width: 30%;
+    object-fit: cover;
+  }
+}
