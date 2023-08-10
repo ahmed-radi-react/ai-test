@@ -1,14 +1,19 @@
 # Project Title
 
 ## Introduction
-This project is a web application built with React and TypeScript. It provides a platform for managing various aspects of a building, including tenants, services, and more.
+Welcome to Volante!
+
+The ultimate tenant services app that simplifies your life! From booking amenities to requesting maintenance and more services. Say goodbye to the hassle of requesting your building's services and hello to the convenience of a digital tool that puts everything at your fingertips.
 
 ## Features
+
 * User Authentication: Users can sign in to access the application.
 * Dashboard: Provides an overview of the building's status and activities.
 * Tenants: Allows management of tenant information and related functionalities.
 * Building: Enables the addition and management of building details.
 * Services: Facilitates the management of various services offered in the building.
+
+[back to top](#welcome-to-volante)
 
 ## Installation
 1. Clone the repository to your local machine.
@@ -19,6 +24,7 @@ This project is a web application built with React and TypeScript. It provides a
 Navigate through the application using the navigation bar. Each section corresponds to a different feature of the application. Follow the prompts and forms in each section to interact with the application.
 
 ## Contribution
+
 Contributions to the project are welcome. To contribute:
 1. Fork the repository.
 2. Create a new branch for your changes.
@@ -31,5 +37,9 @@ Please ensure your pull request adheres to the following guidelines:
 * New features or changes should include tests.
 * Please ensure your code lints.
 
+[back to top](#welcome-to-volante)
+
 ## License
 This project is licensed under the terms of the MIT license.
+
+[back to top](#welcome-to-volante)
