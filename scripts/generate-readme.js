@@ -23,4 +23,7 @@ const projectDirPath = path.resolve(__dirname, '..');
 const filePaths = getFilePaths(projectDirPath);
 const readmeContent = filePaths.join('\n');
 
-fs.writeFileS
+fs.writeFile(path.resolve(projectDirPath, 'README.md'), readmeContent, (err) => {
+  if (err) throw err;
+  console.log('The README.md file has been updated!');
+});
